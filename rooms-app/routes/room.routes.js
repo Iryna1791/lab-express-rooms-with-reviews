@@ -68,4 +68,12 @@ router.post('/:id/delete', (req, res, next) => {
       .catch(err => console.log(err))
 });
 
+// router.get('/list', (req, res) => {
+//   Room.find()
+//       .populate('owner')
+//       .then((roomsList) => {
+//           res.render('room/list', { roomsList })
+//       })
+//       .catch((err) => console.error(`Error while listing movies: ${err}`))
+// })
 module.exports = router;
