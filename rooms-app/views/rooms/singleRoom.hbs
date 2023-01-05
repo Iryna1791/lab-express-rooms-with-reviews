@@ -1,0 +1,16 @@
+<h2>Single rooms</h2>
+
+
+
+<p>{{room.name}}</p>
+<p>{{room.description}}</p>
+<img src={{room.imageUrl}} alt="room" />
+
+{{#if ({{room.owner.toString()}} === {{user._id}})}}
+<a href="/rooms/{{room.id}}/edit"><button>Edit</button></a>
+<form action="/rooms/{{room.id}}/delete" method="post">
+    <button type="submit">Delete</button>
+</form>
+{{/if}}
+
+

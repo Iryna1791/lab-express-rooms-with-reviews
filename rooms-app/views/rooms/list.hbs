@@ -3,11 +3,14 @@
 {{#each rooms}}
 <p>{{name}}</p>
 <p>{{description}}</p>
-<img src={{imageUrl}} alt="room" />
+ <img src={{imageUrl}} alt="room" />
+
 <p>{{owner.fullName}}</p>
 
 <a href="/rooms/{{id}}/edit"><button>Edit</button></a>
 <form action="/rooms/{{id}}/delete" method="post">
     <button type="submit">Delete</button>
 </form>
+
+
 {{/each}}

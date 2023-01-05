@@ -75,7 +75,7 @@ router.post('/login', (req, res) => {
 
 router.get('/profile', (req, res) => {
     console.log(req.session.currentUser)
-    res.render('auth/profile', req.session.currentUser)
+    res.render('auth/profile', {user: req.session.currentUser})
 })
 
 router.post('/logout', (req, res) => {
